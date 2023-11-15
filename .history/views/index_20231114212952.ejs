@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="card">
+            <% if (locals.temp) { %>
+                <h1><%= cityName.toUpperCase() %></h1>
+            <% } else { %>
+                <h1>Write down a city name</h1>
+            <% } %>
+            <form action="/weather" method="post">
+                <input type="text" name="city" placeholder="Enter city name">
+                <br>
+                <button type="submit">Search</button>
+            </form>
+            <% if (locals.temp) { %>
+                <h2>It is <%= Math.round(temp - 273.15) %>°C in <%= cityName[0].toUpperCase() + cityName.slice(1, cityName.length).toLowerCase() %></h2>
+            <% } else { %>
+                <h2></h2>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

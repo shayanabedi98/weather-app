@@ -1,0 +1,16 @@
+body {
+    background-color: #7CC6FE;
+    font-family: 'Quicksand', sans-serif;;
+}
+
+.grid-container {
+
+}
+
+.card {
+    display: grid;
+    grid-template-rows: repeat(3. 1fr);
+    justify-content: center;
+    align-content: center;
+    margin-top: auto;
+}

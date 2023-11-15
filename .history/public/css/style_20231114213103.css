@@ -1,0 +1,32 @@
+body {
+    background-color: #7CC6FE;
+    font-family: 'Quicksand', sans-serif;;
+
+}
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: repeat(3. 1fr);
+    justify-content: center;
+    align-content: center;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    border: none;
+    height: 30px;
+    width: 230px;
+    font-family: 'Quicksand', sans-serif;;
+}
+
+button {
+    font-family: 'Quicksand', sans-serif;;
+}
